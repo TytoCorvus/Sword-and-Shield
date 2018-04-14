@@ -134,6 +134,25 @@
             }
         },
         {
+            "Key": "3b673125-67f4-42ed-8b53-68dc80699da8",
+            "Value": {
+                "id": "b92dc057-bb1b-4244-8ea5-084cee53cf78",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/ground_sprite\/ground_sprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3d748072-cf21-4e71-b9ac-eeb907af2022",
             "Value": {
                 "id": "21c63d99-916e-4173-abfa-1a3eced8de40",
@@ -169,6 +188,25 @@
                 ],
                 "resourcePath": "views\/3f6d8355-5ed7-4f96-905e-a234a9906166.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "58c13e06-83bf-4fde-998e-9f1409085115",
+            "Value": {
+                "id": "96d93b45-5c57-4554-8893-92d31aca7da6",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "rooms\/bryce_test_room\/bryce_test_room.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -378,6 +416,25 @@
                 ],
                 "resourcePath": "options\/mac\/options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f76a223c-53f0-443f-93a2-898292a7e53e",
+            "Value": {
+                "id": "07a45c8f-70d9-44a2-8041-848001401599",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_player\/obj_player.yy",
+                "resourceType": "GMObject"
             }
         },
         {
