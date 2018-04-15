@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114876872942061820}
   - component: {fileID: 61794389378356238}
   - component: {fileID: 50682718180032622}
+  - component: {fileID: 95063644609859376}
   m_Layer: 0
   m_Name: onion
   m_TagString: Enemy
@@ -37,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1462971093123296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.72, y: -2.113, z: 0.4008191}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.26, y: -2.29, z: 0.4008191}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,19 +76,36 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.13, y: -0.17739233}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1.5, y: 1.37}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 1.22, y: 0.99478465}
   m_EdgeRadius: 0
+--- !u!95 &95063644609859376
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1462971093123296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114876872942061820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,6 +120,9 @@ MonoBehaviour:
   timeUntilTurning: 2
   move_speed: 2
   body: {fileID: 50682718180032622}
+  renderer: {fileID: 212496247170488844}
+  tomatoWalk: {fileID: 21300000, guid: 8539616f48b2e9d4d99fb9f12e5169a0, type: 3}
+  tomatoJump: {fileID: 21300002, guid: 8539616f48b2e9d4d99fb9f12e5169a0, type: 3}
   direction: 1
   random_range: {x: 2, y: 4}
 --- !u!212 &212496247170488844
@@ -138,7 +159,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 901957ad6826e4a4dabbf2a9b2ce9c9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8539616f48b2e9d4d99fb9f12e5169a0, type: 3}
   m_Color: {r: 0.6515862, g: 0.23480752, b: 0.74264705, a: 1}
   m_FlipX: 0
   m_FlipY: 0

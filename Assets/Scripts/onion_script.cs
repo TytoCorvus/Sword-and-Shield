@@ -12,6 +12,11 @@ public class onion_script : MonoBehaviour {
 
 	public Rigidbody2D body;
 
+	public SpriteRenderer renderer;
+
+	public Sprite tomatoWalk;
+	public Sprite tomatoJump;
+
 	public int direction;
 
 	public Vector2 random_range;
@@ -27,8 +32,7 @@ public class onion_script : MonoBehaviour {
 
 		timeTilNextJump -= Time.deltaTime;
 		if(timeTilNextJump <= 0f){
-			body.velocity = new Vector2(body.velocity.x, move_speed * 2.5f);
-			timeTilNextJump = Random.Range(random_range.x, random_range.y);
+			jump ();
 		}
 
 		timeRunning += Time.deltaTime;
@@ -46,8 +50,27 @@ public class onion_script : MonoBehaviour {
 		}
 	}
 
+	public void jump(){
+		body.velocity = new Vector2(body.velocity.x, move_speed * 2.5f);
+		timeTilNextJump = Random.Range(random_range.x, random_range.y);
+
+		renderer.sprite = tomatoJump;
+
+		IEnumerator coroutine = waitTime (.1f);
+		StartCoroutine (coroutine);
+	}
+
+	IEnumerator waitTime(float seconds){
+		yield return new WaitForSeconds (seconds);
+		spriteChange ();
+	}
+
+	public void spriteChange(){
+		renderer.sprite = tomatoWalk;
+	}
+
 	void OnDestroy() {
-		player_controller.neededOnions -= 1; 
+		player_controller.neededTomato -= 1; 
 		Debug.Log(player_controller.neededOnions);
 	}
 }
