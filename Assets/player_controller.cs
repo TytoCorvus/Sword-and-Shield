@@ -5,7 +5,6 @@ using UnityEngine;
 public class player_controller : MonoBehaviour {
 
 	public Rigidbody2D rigidbody;
-	public BoxCollider2D collider;
 
 
 	private float grounded_distance = 0.01f;
@@ -40,6 +39,7 @@ public class player_controller : MonoBehaviour {
 			rigidbody.velocity = new Vector2(rigidbody.velocity.x, Mathf.Min(rigidbody.velocity.y, jump_speed/10));
 		}
 
+		//Gravity stuff
 		if(rigidbody.velocity.y < -1f){
 			rigidbody.gravityScale = 4.5f;
 		}
@@ -52,6 +52,6 @@ public class player_controller : MonoBehaviour {
 
 	public void checkIsGrounded(){
 		
-		RaycastHit2D[] below = Physics2D.BoxCastAll(transform.position, new Vector2(32,32), 0, new Vector2(0, -1), 32, 0, 0);
+		//RaycastHit2D[] below = Physics2D.BoxCastAll(transform.position, new Vector2(32,32), 0, new Vector2(0, -1), 32, 0, 0);
 	}
 }
