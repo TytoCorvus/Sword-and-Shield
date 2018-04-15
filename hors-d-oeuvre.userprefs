@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\player_controller.cs">
     <Files>
       <File FileName="Assets\player_controller.cs" Line="30" Column="3" />
+=======
+﻿<Properties StartupItem="hors-d-oeuvre.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\player_controller.cs">
+    <Files>
+      <File FileName="Assets\player_controller.cs" Line="8" Column="2" />
+>>>>>>> e5fa96187630e9485f2a87d010515a9d76eff7e0
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
