@@ -100,7 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50955710955424962}
+  collider: {fileID: 0}
   move_speed: 10
+  jump_speed: 10
 --- !u!212 &212168688073571388
 SpriteRenderer:
   m_ObjectHideFlags: 1
