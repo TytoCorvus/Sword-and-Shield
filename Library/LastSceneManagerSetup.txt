@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Nik_Scene.unity
-=======
-- path: Assets/Scenes/Noah.unity
->>>>>>> e5fa96187630e9485f2a87d010515a9d76eff7e0
+- path: Assets/Scenes/bryce_test_scene.unity
   isLoaded: 1
   isActive: 1
