@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class player_controller : MonoBehaviour {
 
-<<<<<<< HEAD:Assets/player_controller.cs
-	public Rigidbody2D rigidbody;
 	public GameObject jul;
 	public GameObject brs;
-=======
+
 	public new Rigidbody2D rigidbody;
->>>>>>> e5fa96187630e9485f2a87d010515a9d76eff7e0:Assets/Scripts/player_controller.cs
 
 	public float move_speed;
 	public float jump_speed;
@@ -21,29 +19,29 @@ public class player_controller : MonoBehaviour {
 
 	public Transform Shield;
 
-	IList<Collider2D> hitlist = new List<Collider2D>();
+	IList<string> hitlist = new List<string>();
 
-	public float timeLeft = 300f;
+	public float timeLeft = 10f;
+		//300f;
 	public int minutesLeft;
 	public int secondsLeft;
-	public Text timerText;
 
-<<<<<<< HEAD
+	public Text timerText;
+	public Text tomatoText;
+
 	public static int neededTomato = 10;
-	public static int neededOnions = 10;
+	public static int neededCarrot = 10;
 	public static int neededButter = 5;
-=======
-<<<<<<< HEAD:Assets/player_controller.cs
+
 	public Animator jul_AC;
 	public Animator brs_AC;
-=======
-	public static int neededTomato;
-	public static int neededOnions;
-	public static int neededButter;
->>>>>>> e032d99b3221a7b963d988d02c330461fe95c4c2
+
+	public Text restartText;
+	public Text gameOverText;
+
+	private bool restart = false; 
 
 	public BoxCollider2D attackCollider;
->>>>>>> e5fa96187630e9485f2a87d010515a9d76eff7e0:Assets/Scripts/player_controller.cs
 
 	// Use this for initialization
 	void Start () {
@@ -59,7 +57,7 @@ public class player_controller : MonoBehaviour {
 		minutesLeft = (int) (timeLeft / 60);
 		secondsLeft = (int) (timeLeft % 60);
 
-		//timerText.text = minutesLeft.ToString() + ":"+ secondsLeft.ToString();
+		timerText.text = minutesLeft.ToString() + ":"+ secondsLeft.ToString();
 
 		//Jumping and movement
 		if(Input.GetKey(KeyCode.LeftArrow)){
@@ -96,6 +94,10 @@ public class player_controller : MonoBehaviour {
 			attackCollider.enabled = false;
 		}
 
+		if (restart == true && Input.GetKey(KeyCode.R)) {
+			SceneManager.LoadScene("Noah");
+		}
+
 		//Gravity stuff
 		if(rigidbody.velocity.y < -1f){
 			rigidbody.gravityScale = 4.5f;
@@ -126,19 +128,39 @@ public class player_controller : MonoBehaviour {
 			Shield.transform.localPosition = new Vector3 (0.5f, 0.21f, 0.0f);
 		}
 
+		tomatoText.text = neededTomato.ToString();
+
+
+		if (neededTomato == 0) {
+			gameOverText.text = "You Win!";
+			restart = true; 
+		}
+		else if (timeLeft < 0f) {
+			gameOverText.text = "You Lose!";
+			restart = true; 
+		}
+
+		if (restart == true) {
+			restartText.text = "Press R to restart!";
+		}
 	}
 		
 	void OnCollisionEnter2D(Collision2D col){
-		if(col.gameObject.name == "enemy"){
-			hitlist.Add(col.otherCollider);
+		if(col.gameObject.tag == "Enemy"){
+			hitlist.Add(col.otherCollider.name);
 			//Debug.Log (hitlist[0]);
 		}
 			
 	}
 
 	void LateUpdate(){
-		foreach (var el in hitlist)
-			Debug.Log(el);
+		if(!hitlist.Contains("shield_hitbox") && hitlist.Contains("player_character")){
+			if (neededTomato < 10) {
+				neededTomato += 1;
+			}
+
+			//Debug.Log (neededTomato);
+		}
 
 		hitlist.Clear();
 	}
