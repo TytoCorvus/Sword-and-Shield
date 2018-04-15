@@ -11,6 +11,9 @@ public class player_controller : MonoBehaviour {
 	public float jump_speed;
 	private float old_dir = 0f;
 
+	private bool grounded = false;
+	public Transform groundCheck;
+
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +24,8 @@ public class player_controller : MonoBehaviour {
 	void Update () {
 		float direction = 0f;
 
+
+
 		if(Input.GetKey(KeyCode.LeftArrow)){
 			direction -= 1f;
 		}
@@ -29,7 +34,8 @@ public class player_controller : MonoBehaviour {
 			direction += 1f;
 		}
 
-		if(Input.GetKeyDown(KeyCode.Space)){
+
+		if(Input.GetKeyDown(KeyCode.Space) && checkIsGrounded()){
 			rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump_speed);
 		}
 
@@ -48,15 +54,24 @@ public class player_controller : MonoBehaviour {
 
 		Vector3 theScale = transform.localScale;
 
-		if (Mathf.Sign (direction) != Mathf.Sign (old_dir)) {
+		if (Mathf.Sign (direction) != Mathf.Sign (old_dir) && direction != 0f) {
 			theScale.x *= -1; 
 			transform.localScale = theScale;
 		}
 
-		old_dir = direction;
+		if (direction != 0f) {
+			old_dir = direction;
+		}
 	}
 
-	public void checkIsGrounded(){
-		RaycastHit2D[] below = Physics2D.BoxCastAll(transform.position, new Vector2(32,32), 0, new Vector2(0, -1), 32, 0, 0);
+	public bool checkIsGrounded(){
+		RaycastHit2D grounded = Physics2D.Linecast(groundCheck.position , groundCheck.position - new Vector3(0f, .1f, 0f));
+		if (grounded.transform != null) {
+			Debug.Log ("true");
+			return true;
+		} 
+		else {
+			return false;
+		}
 	}
 }
