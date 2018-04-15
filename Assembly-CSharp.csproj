@@ -51,8 +51,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\butter_missile_script.cs" />
+     <Compile Include="Assets\butter_script.cs" />
      <Compile Include="Assets\camera_script.cs" />
+     <Compile Include="Assets\onion_script.cs" />
      <Compile Include="Assets\player_controller.cs" />
+     <Compile Include="Assets\pot_script.cs" />
+ <Reference Include="Facebook.Unity.Settings">
+ <HintPath>/Users/bryce/GameMakerStudio2/hors d'oeuvres/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -142,18 +149,6 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>/Users/bryce/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="Facebook.Unity">
- <HintPath>/Users/bryce/GameMakerStudio2/hors d'oeuvres/Library/FacebookSDK/Facebook.Unity.dll</HintPath>
- </Reference>
- <Reference Include="Facebook.Unity.Arcade">
- <HintPath>/Users/bryce/GameMakerStudio2/hors d'oeuvres/Library/FacebookSDK/Facebook.Unity.Arcade.dll</HintPath>
- </Reference>
- <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/bryce/GameMakerStudio2/hors d'oeuvres/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
- </Reference>
- <Reference Include="FacebookNamedPipeClient">
- <HintPath>/Users/bryce/GameMakerStudio2/hors d'oeuvres/Library/FacebookSDK/FacebookNamedPipeClient.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

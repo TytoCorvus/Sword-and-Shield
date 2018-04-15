@@ -68,7 +68,6 @@ public class player_controller : MonoBehaviour {
 	public bool checkIsGrounded(){
 		RaycastHit2D grounded = Physics2D.Linecast(groundCheck.position , groundCheck.position - new Vector3(0f, .1f, 0f));
 		if (grounded.transform != null) {
-			Debug.Log ("true");
 			return true;
 		} 
 		else {
