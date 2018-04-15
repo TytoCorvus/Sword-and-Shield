@@ -25,7 +25,7 @@ public class player_controller : MonoBehaviour {
 		float direction = 0f;
 
 
-
+		//Jumping and movement
 		if(Input.GetKey(KeyCode.LeftArrow)){
 			direction -= 1f;
 		}
@@ -33,8 +33,7 @@ public class player_controller : MonoBehaviour {
 		if(Input.GetKey(KeyCode.RightArrow)){
 			direction += 1f;
 		}
-
-
+			
 		if(Input.GetKeyDown(KeyCode.Space) && checkIsGrounded()){
 			rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump_speed);
 		}
@@ -59,7 +58,7 @@ public class player_controller : MonoBehaviour {
 			theScale.x *= -1; 
 			transform.localScale = theScale;
 		}
-
+			
 		if (direction != 0f) {
 			old_dir = direction;
 		}
@@ -68,7 +67,6 @@ public class player_controller : MonoBehaviour {
 	public bool checkIsGrounded(){
 		RaycastHit2D grounded = Physics2D.Linecast(groundCheck.position , groundCheck.position - new Vector3(0f, .1f, 0f));
 		if (grounded.transform != null) {
-			Debug.Log ("true");
 			return true;
 		} 
 		else {
