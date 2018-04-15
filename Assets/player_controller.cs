@@ -1,19 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player_controller : MonoBehaviour {
 
-	public Rigidbody2D rigidbody;
+	public new Rigidbody2D rigidbody;
 
-	private float grounded_distance = 0.01f;
 	public float move_speed;
 	public float jump_speed;
 	private float old_dir = 0f;
 
-	private bool grounded = false;
 	public Transform groundCheck;
 
+	public Transform Shield;
+
+	IList<Collider2D> hitlist = new List<Collider2D>();
+
+	public float timeLeft = 300f;
+	public int minutesLeft;
+	public int secondsLeft;
+	public Text timerText;
+
+	public static int neededTomato;
+	public static int neededOnions;
+	public static int neededButter;
+
+	public BoxCollider2D attackCollider;
 
 	// Use this for initialization
 	void Start () {
@@ -24,8 +37,13 @@ public class player_controller : MonoBehaviour {
 	void Update () {
 		float direction = 0f;
 
+		timeLeft -= Time.deltaTime;
+		minutesLeft = (int) (timeLeft / 60);
+		secondsLeft = (int) (timeLeft % 60);
 
+		//timerText.text = minutesLeft.ToString() + ":"+ secondsLeft.ToString();
 
+		//Jumping and movement
 		if(Input.GetKey(KeyCode.LeftArrow)){
 			direction -= 1f;
 		}
@@ -33,14 +51,21 @@ public class player_controller : MonoBehaviour {
 		if(Input.GetKey(KeyCode.RightArrow)){
 			direction += 1f;
 		}
-
-
+			
 		if(Input.GetKeyDown(KeyCode.Space) && checkIsGrounded()){
 			rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump_speed);
 		}
 
 		if(Input.GetKeyUp(KeyCode.Space)){
 			rigidbody.velocity = new Vector2(rigidbody.velocity.x, Mathf.Min(rigidbody.velocity.y, jump_speed/10));
+		}
+
+
+		//Attack script
+		if (Input.GetKey (KeyCode.X)) {
+			attackCollider.enabled = true;
+		} else {
+			attackCollider.enabled = false;
 		}
 
 		//Gravity stuff
@@ -62,7 +87,31 @@ public class player_controller : MonoBehaviour {
 
 		if (direction != 0f) {
 			old_dir = direction;
+
+			//store shield hitbox above head.
+			Shield.transform.eulerAngles = new Vector3(0,0,90);
+			Shield.transform.localPosition = new Vector3 (0.05f, 0.9f, 0.0f);
+
+		} else {
+			//Reset shield hitbox to front. 
+			Shield.transform.eulerAngles = new Vector3(0,0,0);
+			Shield.transform.localPosition = new Vector3 (0.5f, 0.21f, 0.0f);
 		}
+
+	}
+		
+	void OnCollisionEnter2D(Collision2D col){
+		if(col.gameObject.name == "enemy"){
+			hitlist.Add(col.otherCollider);
+			//Debug.Log (hitlist[0]);
+		}
+	}
+
+	void LateUpdate(){
+		foreach (var el in hitlist)
+			Debug.Log(el);
+
+		hitlist.Clear();
 	}
 
 	public bool checkIsGrounded(){
