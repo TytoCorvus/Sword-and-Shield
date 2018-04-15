@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class player_controller : MonoBehaviour {
 
-	public Rigidbody2D rigidbody;
+	public new Rigidbody2D rigidbody;
 
-	private float grounded_distance = 0.01f;
 	public float move_speed;
 	public float jump_speed;
 	private float old_dir = 0f;
 
-	private bool grounded = false;
 	public Transform groundCheck;
 
+	public Transform Shield;
+
+	IList<Collider2D> hitlist = new List<Collider2D>();
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +24,6 @@ public class player_controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float direction = 0f;
-
 
 		//Jumping and movement
 		if(Input.GetKey(KeyCode.LeftArrow)){
@@ -58,10 +58,34 @@ public class player_controller : MonoBehaviour {
 			theScale.x *= -1; 
 			transform.localScale = theScale;
 		}
-			
+
 		if (direction != 0f) {
 			old_dir = direction;
+
+			//store shield hitbox above head.
+			Shield.transform.eulerAngles = new Vector3(0,0,90);
+			Shield.transform.localPosition = new Vector3 (0.05f, 0.9f, 0.0f);
+
+		} else {
+			//Reset shield hitbox to front. 
+			Shield.transform.eulerAngles = new Vector3(0,0,0);
+			Shield.transform.localPosition = new Vector3 (0.5f, 0.21f, 0.0f);
 		}
+
+	}
+		
+	void OnCollisionEnter2D(Collision2D col){
+		if(col.gameObject.name == "enemy"){
+			hitlist.Add(col.otherCollider);
+			//Debug.Log (hitlist);
+		}
+	}
+
+	void LateUpdate(){
+		foreach (var el in hitlist)
+			Debug.Log(el);
+
+		hitlist.Clear();
 	}
 
 	public bool checkIsGrounded(){
