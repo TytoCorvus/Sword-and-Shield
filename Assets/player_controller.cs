@@ -5,13 +5,11 @@ using UnityEngine;
 public class player_controller : MonoBehaviour {
 
 	public Rigidbody2D rigidbody;
-	public BoxCollider2D collider;
-
 
 	private float grounded_distance = 0.01f;
 	public float move_speed;
 	public float jump_speed;
-
+	float direction = 0f;
 
 
 	// Use this for initialization
@@ -21,8 +19,8 @@ public class player_controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float direction = 0f;
 
+		float old_dir = direction; 
 
 		if(Input.GetKey(KeyCode.LeftArrow)){
 			direction -= 1f;
@@ -48,6 +46,13 @@ public class player_controller : MonoBehaviour {
 		}
 
 		rigidbody.velocity = new Vector2(direction * move_speed, rigidbody.velocity.y);
+
+		Vector3 theScale = transform.localScale;
+
+		if (Mathf.Sign (direction) != Mathf.Sign (old_dir)) {
+			theScale.x *= -1; 
+			transform.localScale = theScale;
+		}
 	}
 
 	public void checkIsGrounded(){
