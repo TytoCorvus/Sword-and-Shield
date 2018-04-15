@@ -1,6 +1,10 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/Scenes/Nik_Scene.unity
+=======
+- path: Assets/Scenes/bryce_test_scene.unity
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
 =======
 - path: Assets/Scenes/bryce_test_scene.unity
 >>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9

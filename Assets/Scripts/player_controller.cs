@@ -32,6 +32,15 @@ public class player_controller : MonoBehaviour {
 	public Animator brs_AC;
 
 	public BoxCollider2D attackCollider;
+	public static int neededTomato = 10;
+	public static int neededOnions = 10;
+	public static int neededButter = 5;
+
+	public Animator jul_AC;
+	public Animator brs_AC;
+
+
+	public BoxCollider2D attackCollider;
 
 	// Use this for initialization
 	void Start () {

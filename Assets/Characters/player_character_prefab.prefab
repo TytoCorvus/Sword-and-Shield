@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 61399863569655898}
   m_Layer: 0
   m_Name: attack_collider
+<<<<<<< HEAD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,11 +67,31 @@ GameObject:
   m_Layer: 0
   m_Name: ground_check
 >>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
+=======
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+=======
+--- !u!1 &1184653534194558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4906995593791014}
+  m_Layer: 0
+  m_Name: ground_check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
 --- !u!1 &1267729332283802
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +110,10 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
 --- !u!1 &1656443458116910
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +148,9 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
+=======
 >>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
 --- !u!1 &1916930468224692
 GameObject:
@@ -148,7 +175,11 @@ Transform:
   m_GameObject: {fileID: 1267729332283802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 0.45, y: 0.21, z: 0}
+=======
+  m_LocalPosition: {x: 0.45, y: 0.15, z: 0}
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
 =======
   m_LocalPosition: {x: 0.45, y: 0.15, z: 0}
 >>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
@@ -165,6 +196,7 @@ Transform:
   m_GameObject: {fileID: 1106513269673538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -0.5, y: -1.42, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -178,6 +210,11 @@ Transform:
   m_LocalPosition: {x: -0.5, y: -1.42, z: -0.3333696}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+=======
+  m_LocalPosition: {x: -0.5, y: -1.42, z: -0.3333696}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
   - {fileID: 4906995593791014}
   - {fileID: 4050901370319932}
   - {fileID: 4836991310996814}
@@ -213,6 +250,9 @@ Transform:
   m_Father: {fileID: 4397973121502302}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
+=======
 >>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
 --- !u!4 &4755436513468124
 Transform:
@@ -222,17 +262,23 @@ Transform:
   m_GameObject: {fileID: 1171223340698826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 1.22, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4397973121502302}
   m_RootOrder: 2
 =======
+=======
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
   m_LocalPosition: {x: 1.22, y: 0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4397973121502302}
   m_RootOrder: 3
+<<<<<<< HEAD
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
+=======
 >>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4836991310996814
@@ -247,7 +293,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4397973121502302}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4906995593791014
@@ -261,6 +310,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4397973121502302}
+<<<<<<< HEAD
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
+=======
 >>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -406,9 +458,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 50955710955424962}
 <<<<<<< HEAD
+<<<<<<< HEAD
   move_speed: 4
   jump_speed: 10
   groundCheck: {fileID: 4836991310996814}
+=======
+  jul: {fileID: 1171223340698826}
+  brs: {fileID: 1267729332283802}
+  move_speed: 4
+  jump_speed: 10
+  groundCheck: {fileID: 4906995593791014}
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
 =======
   jul: {fileID: 1171223340698826}
   brs: {fileID: 1267729332283802}
@@ -422,13 +482,19 @@ MonoBehaviour:
   secondsLeft: 0
   timerText: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   attackCollider: {fileID: 61399863569655898}
 --- !u!212 &212168688073571388
 =======
+=======
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
   jul_AC: {fileID: 95930465568133768}
   brs_AC: {fileID: 95645538869915592}
   attackCollider: {fileID: 61399863569655898}
 --- !u!212 &212417243591145018
+<<<<<<< HEAD
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
+=======
 >>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -508,7 +574,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: bca51f6f1cadc884aaf837e37bc2b62a, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: b68c4ccfd7b141f4084feeeb03c9c7b4, type: 3}
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
 =======
   m_Sprite: {fileID: 21300000, guid: b68c4ccfd7b141f4084feeeb03c9c7b4, type: 3}
 >>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
