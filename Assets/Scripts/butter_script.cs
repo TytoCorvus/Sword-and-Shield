@@ -80,6 +80,16 @@ public class butter_script : MonoBehaviour {
 
 
 	}
+		
+	void OnTriggerEnter2D(Collider2D col){
+		if (col.name == "attack_collider"){
+			Destroy (gameObject);
+		}
+	}
 
+	void OnDestroy() {
+		player_controller.neededButter -= 1; 
+		Debug.Log(player_controller.neededButter);
+	}
 
 }

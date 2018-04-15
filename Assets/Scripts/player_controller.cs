@@ -5,13 +5,9 @@ using UnityEngine.UI;
 
 public class player_controller : MonoBehaviour {
 
-<<<<<<< HEAD:Assets/player_controller.cs
 	public Rigidbody2D rigidbody;
 	public GameObject jul;
 	public GameObject brs;
-=======
-	public new Rigidbody2D rigidbody;
->>>>>>> e5fa96187630e9485f2a87d010515a9d76eff7e0:Assets/Scripts/player_controller.cs
 
 	public float move_speed;
 	public float jump_speed;
@@ -27,17 +23,15 @@ public class player_controller : MonoBehaviour {
 	public int minutesLeft;
 	public int secondsLeft;
 	public Text timerText;
+	
+	public static int neededTomato = 10;
+	public static int neededOnions = 10;
+	public static int neededButter = 5;
 
-<<<<<<< HEAD:Assets/player_controller.cs
 	public Animator jul_AC;
 	public Animator brs_AC;
-=======
-	public static int neededTomato;
-	public static int neededOnions;
-	public static int neededButter;
 
 	public BoxCollider2D attackCollider;
->>>>>>> e5fa96187630e9485f2a87d010515a9d76eff7e0:Assets/Scripts/player_controller.cs
 
 	// Use this for initialization
 	void Start () {
