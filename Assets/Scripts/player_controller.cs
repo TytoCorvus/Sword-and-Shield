@@ -9,7 +9,6 @@ public class player_controller : MonoBehaviour {
 	public GameObject jul;
 	public GameObject brs;
 
-
 	public float move_speed;
 	public float jump_speed;
 	private float old_dir = 0f;
@@ -24,7 +23,15 @@ public class player_controller : MonoBehaviour {
 	public int minutesLeft;
 	public int secondsLeft;
 	public Text timerText;
+	
+	public static int neededTomato = 10;
+	public static int neededOnions = 10;
+	public static int neededButter = 5;
 
+	public Animator jul_AC;
+	public Animator brs_AC;
+
+	public BoxCollider2D attackCollider;
 	public static int neededTomato = 10;
 	public static int neededOnions = 10;
 	public static int neededButter = 5;
@@ -34,7 +41,6 @@ public class player_controller : MonoBehaviour {
 
 
 	public BoxCollider2D attackCollider;
-
 
 	// Use this for initialization
 	void Start () {
