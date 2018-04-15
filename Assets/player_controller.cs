@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player_controller : MonoBehaviour {
 
@@ -14,6 +15,10 @@ public class player_controller : MonoBehaviour {
 	private bool grounded = false;
 	public Transform groundCheck;
 
+	public float timeLeft = 300f;
+	public int minutesLeft;
+	public int secondsLeft;
+	public Text timerText;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +29,11 @@ public class player_controller : MonoBehaviour {
 	void Update () {
 		float direction = 0f;
 
+		timeLeft -= Time.deltaTime;
+		minutesLeft = (int) (timeLeft / 60);
+		secondsLeft = (int) (timeLeft % 60);
+
+		timerText.text = minutesLeft.ToString() + ":"+ secondsLeft.ToString();
 
 		//Jumping and movement
 		if(Input.GetKey(KeyCode.LeftArrow)){
