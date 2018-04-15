@@ -1,7 +1,4 @@
 sceneSetups:
-- path: Assets/bryce_test_scene.unity
-  isLoaded: 0
-  isActive: 0
 - path: Assets/Noah.unity
   isLoaded: 1
   isActive: 1

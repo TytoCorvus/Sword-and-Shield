@@ -9,7 +9,7 @@ public class player_controller : MonoBehaviour {
 	private float grounded_distance = 0.01f;
 	public float move_speed;
 	public float jump_speed;
-	float direction = 0f;
+	private float old_dir = 0f;
 
 
 	// Use this for initialization
@@ -19,8 +19,7 @@ public class player_controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		float old_dir = direction; 
+		float direction = 0f;
 
 		if(Input.GetKey(KeyCode.LeftArrow)){
 			direction -= 1f;
@@ -53,10 +52,11 @@ public class player_controller : MonoBehaviour {
 			theScale.x *= -1; 
 			transform.localScale = theScale;
 		}
+
+		old_dir = direction;
 	}
 
 	public void checkIsGrounded(){
-		
 		RaycastHit2D[] below = Physics2D.BoxCastAll(transform.position, new Vector2(32,32), 0, new Vector2(0, -1), 32, 0, 0);
 	}
 }
