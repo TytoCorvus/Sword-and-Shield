@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player_controller : MonoBehaviour {
 
@@ -12,9 +13,16 @@ public class player_controller : MonoBehaviour {
 
 	public Transform groundCheck;
 
+<<<<<<< HEAD
 	public Transform Shield;
 
 	IList<Collider2D> hitlist = new List<Collider2D>();
+=======
+	public float timeLeft = 300f;
+	public int minutesLeft;
+	public int secondsLeft;
+	public Text timerText;
+>>>>>>> 1443751dd05ab4927e4cbc295780034b55c8d232
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +32,12 @@ public class player_controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float direction = 0f;
+
+		timeLeft -= Time.deltaTime;
+		minutesLeft = (int) (timeLeft / 60);
+		secondsLeft = (int) (timeLeft % 60);
+
+		timerText.text = minutesLeft.ToString() + ":"+ secondsLeft.ToString();
 
 		//Jumping and movement
 		if(Input.GetKey(KeyCode.LeftArrow)){

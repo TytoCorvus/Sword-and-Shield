@@ -855,7 +855,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5:00
+  m_Text: 
 --- !u!222 &1255464943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1016,6 +1016,11 @@ Prefab:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114913060992037286, guid: ec5d75d9307984836be832e4fefca7b9,
+        type: 2}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 1255464942}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec5d75d9307984836be832e4fefca7b9, type: 2}
   m_IsPrefabParent: 0
