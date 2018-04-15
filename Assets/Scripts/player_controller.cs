@@ -22,9 +22,9 @@ public class player_controller : MonoBehaviour {
 	public int secondsLeft;
 	public Text timerText;
 
-	public static int neededTomato;
-	public static int neededOnions;
-	public static int neededButter;
+	public static int neededTomato = 10;
+	public static int neededOnions = 10;
+	public static int neededButter = 5;
 
 	public BoxCollider2D attackCollider;
 

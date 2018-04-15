@@ -39,4 +39,15 @@ public class onion_script : MonoBehaviour {
 
 		transform.position += new Vector3((float)direction * move_speed * Time.deltaTime, 0f, 0f);
 	}
+
+	void OnTriggerEnter2D(Collider2D col){
+		if (col.name == "attack_collider"){
+			Destroy (gameObject);
+		}
+	}
+
+	void OnDestroy() {
+		player_controller.neededOnions -= 1; 
+		Debug.Log(player_controller.neededOnions);
+	}
 }

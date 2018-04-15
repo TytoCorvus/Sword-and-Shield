@@ -1,8 +1,10 @@
-﻿<Properties StartupItem="hors-d-oeuvre.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\player_controller.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\butter_script.cs">
     <Files>
-      <File FileName="Assets\player_controller.cs" Line="8" Column="2" />
+      <File FileName="Assets\Scripts\player_controller.cs" Line="5" Column="1" />
+      <File FileName="Assets\Scripts\onion_script.cs" Line="43" Column="1" />
+      <File FileName="Assets\Scripts\butter_script.cs" Line="81" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
