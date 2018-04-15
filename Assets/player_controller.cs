@@ -13,16 +13,14 @@ public class player_controller : MonoBehaviour {
 
 	public Transform groundCheck;
 
-<<<<<<< HEAD
 	public Transform Shield;
 
 	IList<Collider2D> hitlist = new List<Collider2D>();
-=======
+
 	public float timeLeft = 300f;
 	public int minutesLeft;
 	public int secondsLeft;
 	public Text timerText;
->>>>>>> 1443751dd05ab4927e4cbc295780034b55c8d232
 
 	// Use this for initialization
 	void Start () {
