@@ -7,6 +7,7 @@ public class player_controller : MonoBehaviour {
 	public Rigidbody2D rigidbody;
 	public BoxCollider2D collider;
 
+
 	private float grounded_distance = 0.01f;
 	public float move_speed;
 	public float jump_speed;
@@ -30,8 +31,12 @@ public class player_controller : MonoBehaviour {
 			direction += 1f;
 		}
 
-		if(Input.GetKey(KeyCode.Space)){
+		if(Input.GetKeyDown(KeyCode.Space)){
 			rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump_speed);
+		}
+
+		if(Input.GetKeyUp(KeyCode.Space)){
+			rigidbody.velocity = new Vector2(rigidbody.velocity.x, Mathf.Min(rigidbody.velocity.y, jump_speed/10));
 		}
 
 		if(rigidbody.velocity.y < -1f){
@@ -45,6 +50,7 @@ public class player_controller : MonoBehaviour {
 	}
 
 	public void checkIsGrounded(){
-		//RaycastHit2D
+		
+		//RaycastHit2D[] below = Physics2D.BoxCastAll(transform.position, );
 	}
 }
