@@ -13,6 +13,7 @@ public class player_controller : MonoBehaviour {
 	public float jump_speed;
 
 
+
 	// Use this for initialization
 	void Start () {
 
@@ -51,6 +52,6 @@ public class player_controller : MonoBehaviour {
 
 	public void checkIsGrounded(){
 		
-		//RaycastHit2D[] below = Physics2D.BoxCastAll(transform.position, );
+		RaycastHit2D[] below = Physics2D.BoxCastAll(transform.position, new Vector2(32,32), 0, new Vector2(0, -1), 32, 0, 0);
 	}
 }
