@@ -242,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 765035289}
   m_Layer: 0
-  m_Name: child_object
+  m_Name: jump_detection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -724,6 +724,26 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 61770839179669312, guid: ec5d75d9307984836be832e4fefca7b9,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 61770839179669312, guid: ec5d75d9307984836be832e4fefca7b9,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 61770839179669312, guid: ec5d75d9307984836be832e4fefca7b9,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61770839179669312, guid: ec5d75d9307984836be832e4fefca7b9,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec5d75d9307984836be832e4fefca7b9, type: 2}
