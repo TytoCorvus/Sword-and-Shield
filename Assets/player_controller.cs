@@ -22,6 +22,12 @@ public class player_controller : MonoBehaviour {
 	public int secondsLeft;
 	public Text timerText;
 
+	public static int neededTomato;
+	public static int neededOnions;
+	public static int neededButter;
+
+	public BoxCollider2D attackCollider;
+
 	// Use this for initialization
 	void Start () {
 
@@ -35,7 +41,7 @@ public class player_controller : MonoBehaviour {
 		minutesLeft = (int) (timeLeft / 60);
 		secondsLeft = (int) (timeLeft % 60);
 
-		timerText.text = minutesLeft.ToString() + ":"+ secondsLeft.ToString();
+		//timerText.text = minutesLeft.ToString() + ":"+ secondsLeft.ToString();
 
 		//Jumping and movement
 		if(Input.GetKey(KeyCode.LeftArrow)){
@@ -52,6 +58,14 @@ public class player_controller : MonoBehaviour {
 
 		if(Input.GetKeyUp(KeyCode.Space)){
 			rigidbody.velocity = new Vector2(rigidbody.velocity.x, Mathf.Min(rigidbody.velocity.y, jump_speed/10));
+		}
+
+
+		//Attack script
+		if (Input.GetKey (KeyCode.X)) {
+			attackCollider.enabled = true;
+		} else {
+			attackCollider.enabled = false;
 		}
 
 		//Gravity stuff
@@ -89,7 +103,7 @@ public class player_controller : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		if(col.gameObject.name == "enemy"){
 			hitlist.Add(col.otherCollider);
-			//Debug.Log (hitlist);
+			//Debug.Log (hitlist[0]);
 		}
 	}
 
