@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\player_controller.cs" />
      <Compile Include="Assets\Scripts\pot_script.cs" />
      <Compile Include="Assets\Scripts\ShieldScript.cs" />
+     <Compile Include="Assets\temp_spawn.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/bryce/GameMakerStudio2/hors d'oeuvres/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
