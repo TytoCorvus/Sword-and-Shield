@@ -5,7 +5,13 @@ using UnityEngine.UI;
 
 public class player_controller : MonoBehaviour {
 
+<<<<<<< HEAD:Assets/player_controller.cs
+	public Rigidbody2D rigidbody;
+	public GameObject jul;
+	public GameObject brs;
+=======
 	public new Rigidbody2D rigidbody;
+>>>>>>> e5fa96187630e9485f2a87d010515a9d76eff7e0:Assets/Scripts/player_controller.cs
 
 	public float move_speed;
 	public float jump_speed;
@@ -22,20 +28,32 @@ public class player_controller : MonoBehaviour {
 	public int secondsLeft;
 	public Text timerText;
 
+<<<<<<< HEAD
 	public static int neededTomato = 10;
 	public static int neededOnions = 10;
 	public static int neededButter = 5;
+=======
+<<<<<<< HEAD:Assets/player_controller.cs
+	public Animator jul_AC;
+	public Animator brs_AC;
+=======
+	public static int neededTomato;
+	public static int neededOnions;
+	public static int neededButter;
+>>>>>>> e032d99b3221a7b963d988d02c330461fe95c4c2
 
 	public BoxCollider2D attackCollider;
+>>>>>>> e5fa96187630e9485f2a87d010515a9d76eff7e0:Assets/Scripts/player_controller.cs
 
 	// Use this for initialization
 	void Start () {
-
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		float direction = 0f;
+
 
 		timeLeft -= Time.deltaTime;
 		minutesLeft = (int) (timeLeft / 60);
@@ -46,10 +64,20 @@ public class player_controller : MonoBehaviour {
 		//Jumping and movement
 		if(Input.GetKey(KeyCode.LeftArrow)){
 			direction -= 1f;
+			jul_AC.SetBool("isRunning", true);
+			brs_AC.SetBool("isRunning", true);
 		}
 
 		if(Input.GetKey(KeyCode.RightArrow)){
 			direction += 1f;
+			jul_AC.SetBool("isRunning", true);
+			brs_AC.SetBool("isRunning", true);
+		}
+
+		if (!Input.GetKey (KeyCode.RightArrow))
+		if (!Input.GetKey (KeyCode.LeftArrow)) {
+			jul_AC.SetBool ("isRunning", false);
+			brs_AC.SetBool ("isRunning", false);
 		}
 			
 		if(Input.GetKeyDown(KeyCode.Space) && checkIsGrounded()){
@@ -105,6 +133,7 @@ public class player_controller : MonoBehaviour {
 			hitlist.Add(col.otherCollider);
 			//Debug.Log (hitlist[0]);
 		}
+			
 	}
 
 	void LateUpdate(){

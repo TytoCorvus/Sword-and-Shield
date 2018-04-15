@@ -60,7 +60,15 @@
      <Compile Include="Assets\Scripts\pot_script.cs" />
      <Compile Include="Assets\Scripts\ShieldScript.cs" />
  <Reference Include="Facebook.Unity.Settings">
+<<<<<<< HEAD
  <HintPath>C:/Users/Noah/hors-d-oeuvre/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+=======
+<<<<<<< HEAD
+ <HintPath>C:/Users/Nik/Documents/GitHub/hors-d-oeuvre/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+=======
+ <HintPath>/Users/bryce/GameMakerStudio2/hors d'oeuvres/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+>>>>>>> e5fa96187630e9485f2a87d010515a9d76eff7e0
+>>>>>>> e032d99b3221a7b963d988d02c330461fe95c4c2
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
