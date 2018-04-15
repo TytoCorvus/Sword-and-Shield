@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Noah.unity
+- path: Assets/Nik_Scene.unity
   isLoaded: 1
   isActive: 1
