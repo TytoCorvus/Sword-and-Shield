@@ -1,10 +1,63 @@
+<<<<<<< HEAD
+=======
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\onion_script.cs">
+    <Files>
+      <File FileName="Assets\Scripts\player_controller.cs" Line="2" Column="34" />
+      <File FileName="Assets\Scripts\onion_script.cs" Line="1" Column="1" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\butter_script.cs">
+    <Files>
+      <File FileName="Assets\Scripts\player_controller.cs" Line="5" Column="1" />
+      <File FileName="Assets\Scripts\onion_script.cs" Line="43" Column="1" />
+      <File FileName="Assets\Scripts\butter_script.cs" Line="81" Column="3" />
+=======
+<<<<<<< HEAD
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\butter_script.cs">
+    <Files>
+      <File FileName="Assets\Scripts\player_controller.cs" Line="5" Column="1" />
+      <File FileName="Assets\Scripts\onion_script.cs" Line="43" Column="1" />
+      <File FileName="Assets\Scripts\butter_script.cs" Line="81" Column="3" />
+=======
+<<<<<<< HEAD
+>>>>>>> 00ad07fc7ac94ad782d103f24afc46071a29213f
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\player_controller.cs">
     <Files>
       <File FileName="Assets\Scripts\player_controller.cs" Line="7" Column="2" />
       <File FileName="Assets\Scripts\onion_script.cs" Line="43" Column="1" />
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\butter_script.cs" Line="89" Column="1" />
+=======
+      <File FileName="Assets\Scripts\butter_script.cs" Line="81" Column="3" />
+=======
+<<<<<<< HEAD
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\player_controller.cs">
+    <Files>
+      <File FileName="Assets\player_controller.cs" Line="30" Column="3" />
+=======
+﻿<Properties StartupItem="hors-d-oeuvre.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\player_controller.cs">
+    <Files>
+      <File FileName="Assets\player_controller.cs" Line="8" Column="2" />
+>>>>>>> e5fa96187630e9485f2a87d010515a9d76eff7e0
+>>>>>>> e032d99b3221a7b963d988d02c330461fe95c4c2
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a2029c7cb0a4b99634627c34d7d81b4705521a72
+=======
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
+=======
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
+>>>>>>> 00ad07fc7ac94ad782d103f24afc46071a29213f
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

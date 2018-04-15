@@ -6,10 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class player_controller : MonoBehaviour {
 
+<<<<<<< HEAD
 	public GameObject jul;
 	public GameObject brs;
 
 	public new Rigidbody2D rigidbody;
+=======
+	public Rigidbody2D rigidbody;
+	public GameObject jul;
+	public GameObject brs;
+>>>>>>> 00ad07fc7ac94ad782d103f24afc46071a29213f
 
 	public float move_speed;
 	public float jump_speed;
@@ -27,19 +33,26 @@ public class player_controller : MonoBehaviour {
 	public int secondsLeft;
 
 	public Text timerText;
+<<<<<<< HEAD
 	public Text tomatoText;
 
+=======
+	
+>>>>>>> 00ad07fc7ac94ad782d103f24afc46071a29213f
 	public static int neededTomato = 10;
 	public static int neededCarrot = 10;
 	public static int neededButter = 5;
 
 	public Animator jul_AC;
 	public Animator brs_AC;
+<<<<<<< HEAD
 
 	public Text restartText;
 	public Text gameOverText;
 
 	private bool restart = false; 
+=======
+>>>>>>> 00ad07fc7ac94ad782d103f24afc46071a29213f
 
 	public BoxCollider2D attackCollider;
 
