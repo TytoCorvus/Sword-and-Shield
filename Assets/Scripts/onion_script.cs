@@ -23,7 +23,13 @@ public class onion_script : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		direction = 1;
+
+		if (Random.Range(0,2) == 1){
+			direction = 1;
+		}
+		else{
+			direction = -1;		
+		}
 		timeTilNextJump = Random.Range(random_range.x, random_range.y);
 	}
 	
@@ -71,6 +77,6 @@ public class onion_script : MonoBehaviour {
 
 	void OnDestroy() {
 		player_controller.neededTomato -= 1; 
-		Debug.Log(player_controller.neededOnions);
+		Debug.Log(player_controller.neededTomato);
 	}
 }

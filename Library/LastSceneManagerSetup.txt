@@ -1,4 +1,20 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Nik_Scene.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/Noah.unity
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- path: Assets/Scenes/Nik_Scene.unity
+=======
+- path: Assets/Scenes/bryce_test_scene.unity
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
+=======
+- path: Assets/Scenes/bryce_test_scene.unity
+>>>>>>> 998801d4ae44a59ac076b8e1dd7393ec4d907fb9
+>>>>>>> 00ad07fc7ac94ad782d103f24afc46071a29213f
+>>>>>>> 9fcc27ce5965cdc9bb06a39dc2f0840985d1a994
   isLoaded: 1
   isActive: 1
